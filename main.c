@@ -7,7 +7,7 @@ float carga = 0.0;
 int volta;
 float desejado = -1;
 float bateria = 0;
-float tarifa = 2;
+float tarifa = 0.5;
 float batarifa;
 float tempo;
 float tempoh;
@@ -63,13 +63,13 @@ int main(){
         }
     }else if (opcao == 2){
         printf("opcao selecionada: 2\n\n");
-        printf("REGRAS DA TARIFACAO: 2 REAIS POR kWH\n");
+        printf("REGRAS DA TARIFACAO: 0.50 CENTAVOS POR kWH\n");
         // Estamos levando em conta o carregador de potencia 22kWH!
         printf("TEMPO DE RECARGA: 2 minutos e 44 segundos para cada 1kWH\n");
         colocou:
         if (bateria != 0){
             printf("Bateria do seu carro = %.2fkWH\n", bateria);
-            printf("Tarifa = R$ 2.00\n");
+            printf("Tarifa = R$ 0.50\n");
             printf("2.44 minutos para cada 1kWH\n");
             batarifa = bateria * tarifa;
             tempo = 2.44 * bateria;
